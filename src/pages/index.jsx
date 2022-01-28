@@ -1,10 +1,10 @@
 // import axios from "axios";
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 // import Displaychart from "../components/Displaychart";
 import Firstbody from "../components/Firstbody";
 import VoteCardComp from "../components/VoteCard";
-import { axiosInstance } from "../utils/constants";
 
 const HomePage = () => {
   const [election, setElection] = useState({});
@@ -15,7 +15,7 @@ const HomePage = () => {
   useEffect(() => {
     const getElection = async () => {
       try {
-        const { data } = await axiosInstance.get(`/vote/election/currect`);
+        const { data } = await axios.get(`/vote/election/currect`);
 
         setElection(data);
         setCandidates(data?.candidates);

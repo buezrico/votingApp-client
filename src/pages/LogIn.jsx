@@ -1,17 +1,17 @@
 // import axios from "axios";
+import axios from "axios";
 import cookie from "js-cookie";
 import React from "react";
 import { GoogleLogin } from "react-google-login";
 import { useRecoilValue } from "recoil";
 import styled from "styled-components";
 import { UserAtom } from "../atoms/userAtom";
-import { axiosInstance } from "../utils/constants";
 
 const LogIn = () => {
   const user = useRecoilValue(UserAtom);
 
   const onLoginSuccess = async (res) => {
-    const { data } = await axiosInstance.post("/auth/google", res.profileObj);
+    const { data } = await axios.post("/auth/google", res.profileObj);
     cookie.set("token", data);
     alert("Login Successful !!");
     window.location.href = "/";
