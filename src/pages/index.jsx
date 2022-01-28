@@ -30,19 +30,37 @@ const HomePage = () => {
 
   return (
     <Wrapper className="homepage">
-      <div className="container">
+      <div className="container ">
         <Firstbody />
-        {election?.type ? (
-          <h2 className="mt-4">
-            {election?.type} {election?.year}
-          </h2>
-        ) : (
-          <h2 className="mt-4">There is no on-going election</h2>
-        )}
-        <div className="vote-list" id="vote">
-          {candidates?.map((candidate, i) => (
-            <VoteCardComp key={i} candidate={candidate} />
-          ))}
+        <div className=" d-flex-column justify-content-center">
+          {election?.type ? (
+            <div className="">
+              <h1 className="text-center fw-bold mt-4 text-success border p-2 px-5 bg-success text-light ">
+                ON-GOING ELECTION
+              </h1>
+              <h2 className="mt-5 text-center text-success">
+                CATEGORY: {election?.type} | YEAR: {election?.year}
+              </h2>
+            </div>
+          ) : (
+            <h2 className="text-uppercase mt-4 fw-bold mt-4 text-success border p-2 px-5 bg-success text-light ">
+              There is no on-going election
+            </h2>
+          )}
+          {election?.type ? (
+            <h3 className="text-center mt-4">CANDIDATES</h3>
+          ) : (
+            ""
+          )}
+
+          <div
+            className="vote-list d-flex-column justify-content-center"
+            id="vote"
+          >
+            {candidates?.map((candidate, i) => (
+              <VoteCardComp key={i} candidate={candidate} />
+            ))}
+          </div>
         </div>
       </div>
       {/* <VotingSection /> */}

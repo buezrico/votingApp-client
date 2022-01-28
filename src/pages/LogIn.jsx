@@ -25,7 +25,6 @@ const LogIn = () => {
         <GoogleLogin
           clientId="66062089296-hr48bpa2rmsik1mgghh6mbefaih9inmj.apps.googleusercontent.com"
           // clientId="1053308372239-q514o398rd9f36vtcan3jah78duksv2t.apps.googleusercontent.com"
-          // clientId="829312939207-0mtq5de7pfjj0cioq6ilf6ajvjrih18h.apps.googleusercontent.com"
           // clientId={process.env.REACT_APP_GOOGLE_CLIENT}
           onSuccess={onLoginSuccess}
           onFailure={(e) => console.log(e)}
@@ -35,9 +34,9 @@ const LogIn = () => {
             <button
               // eslint-disable-next-line react/prop-types
               onClick={props.onClick}
-              className="btn border mb-3 text-muted fs-5 d-block fw-bold"
+              className="btn-outline-success border-1 btn fs-6 py-4 w-25 fw-bold d-flex justify-content-start"
               // eslint-disable-next-line react/prop-types
-              disabled={props?.disabled}
+              // disabled={props?.disabled}
             >
               <span>
                 <svg
@@ -71,7 +70,7 @@ const LogIn = () => {
                     </clipPath>
                   </defs>
                 </svg>
-                &nbsp;&nbsp;Sign in with Google
+                &nbsp;&nbsp;<i className="fw-bold fs-5">Sign in with Google</i>
               </span>
             </button>
           )}
