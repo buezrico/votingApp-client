@@ -23,7 +23,7 @@ const LogIn = () => {
     <Wrapper>
       <div className="container login">
         <GoogleLogin
-          clientId="66062089296-lg7up2pq0i18lteoloqm9e121q45affh.apps.googleusercontent.com"
+          clientId="66062089296-hr48bpa2rmsik1mgghh6mbefaih9inmj.apps.googleusercontent.com"
           // clientId="1053308372239-q514o398rd9f36vtcan3jah78duksv2t.apps.googleusercontent.com"
           // clientId="829312939207-0mtq5de7pfjj0cioq6ilf6ajvjrih18h.apps.googleusercontent.com"
           // clientId={process.env.REACT_APP_GOOGLE_CLIENT}
