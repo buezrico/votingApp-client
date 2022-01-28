@@ -15,11 +15,11 @@ import Routes from "./routes";
 import "./styles/custom.scss";
 import "./styles/index.scss";
 import "rsuite/dist/rsuite.min.css";
-import { axiosInstance, SERVER_URL } from "./utils/constants";
+import { axiosInstance } from "./utils/constants";
 // import "rsuite";
 
 const token = Cookies.get("token");
-axios.defaults.baseURL = SERVER_URL;
+// axios.defaults.baseURL = SERVER_URL;
 
 axios.defaults.withCredentials = true;
 axios.defaults.headers.common["authorization"] = token;
