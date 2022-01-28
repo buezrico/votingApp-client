@@ -9,10 +9,10 @@ import { SERVER_URL } from "./utils/constants";
 export const socket = io(SERVER_URL);
 
 ReactDOM.render(
-	<React.StrictMode>
-		<RecoilRoot>
-			<App />
-		</RecoilRoot>
-	</React.StrictMode>,
-	document.getElementById("root"),
+  <React.StrictMode>
+    <RecoilRoot>
+      <App />
+    </RecoilRoot>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
