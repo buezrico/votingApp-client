@@ -26,6 +26,15 @@ const HeaderComp = () => {
             Login to VOTE
           </Link>
         )}
+        {user?.isAdmin && (
+          <Link
+            to="/admin"
+            type="button"
+            className="text-uppercase border-2 btn btn-outline-success d-btn2 m-0"
+          >
+            ADMIN DASHBOARD
+          </Link>
+        )}
 
         {user && (
           <ul className="nav">
